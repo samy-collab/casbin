@@ -1,0 +1,10 @@
+p, admin, /tasks, (GET|POST), allow
+p, admin, /tasks/:id, (GET|PUT|DELETE), allow
+p, user, /tasks, GET, allow
+p, user, /tasks/:id, GET, allow
+p, owner, /tasks/:id, (PUT|DELETE), allow
+p, alice, /tasks, POST, allow
+
+g, admin, admin
+g, alice, user
+g, bob, user
